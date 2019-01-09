@@ -6,6 +6,8 @@ Schema.description = "A schema set in the SCP Universe."
 ix.util.Include("sh_config.lua")
 ix.util.Include("sh_commands.lua")
 
+ix.util.Include("sh_hooks.lua")
+
 
 
 ix.char.RegisterVar("clearance", {
