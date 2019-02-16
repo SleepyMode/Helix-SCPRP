@@ -13,4 +13,5 @@ ix.currency.singular = "USD"
 -- the characters, so that when interacting
 -- in character it would still show others
 -- as unrecognised.
-ix.config.SetDefault("scoreboardRecognition", true)
+-- NOTE: This is no longer the case.
+-- ix.config.SetDefault("scoreboardRecognition", true)
