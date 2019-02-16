@@ -1,6 +1,6 @@
 
 CLASS.name 		= "Medical Assistant"
-CLASS.faction 	= FACTION_MEDICAL
+CLASS.faction 	= FACTION_MEDIC
 CLASS.isDefault = true
 
 CLASS.clearance = 1
