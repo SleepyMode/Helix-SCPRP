@@ -5,6 +5,7 @@ FACTION.color = Color(220, 30, 190)
 FACTION.isDefault = true
 
 FACTION.models = {
+	-- Male
 	"models/humans/group01/scrub1a.mdl",
 	"models/humans/group01/scrub1b.mdl",
 	"models/humans/group01/scrub1c.mdl",
@@ -23,6 +24,8 @@ FACTION.models = {
 	"models/humans/group01/scrub2g.mdl",
 	"models/humans/group01/scrub2h.mdl",
 	"models/humans/group01/scrub2i.mdl",
+
+	-- Female
 	"models/humans/group01/scrubfe1a.mdl",
 	"models/humans/group01/scrubfe1b.mdl",
 	"models/humans/group01/scrubfe1c.mdl",
