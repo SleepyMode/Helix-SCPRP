@@ -15,7 +15,7 @@ FACITON.models = {
 	"models/bmscientistcits/male_07.mdl",
 	"models/bmscientistcits/male_08.mdl",
 	"models/bmscientistcits/male_09.mdl",
-	"models/bmscientistcits/male_10.mdl"
+	"models/bmscientistcits/male_10.mdl",
 
 	-- Female
 	"models/bmscientistcits/female_01.mdl",
