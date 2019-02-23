@@ -4,7 +4,7 @@ FACTION.description = "Scientists researching SCPs and anomalies."
 FACTION.color = Color(255, 200, 50)
 FACTION.isDefault = true
 
-FACITON.models = {
+FACTION.models = {
 	-- Male
 	"models/bmscientistcits/male_01.mdl",
 	"models/bmscientistcits/male_02.mdl",
