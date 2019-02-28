@@ -7,6 +7,6 @@ function Schema:GetSalaryAmount(client, faction)
 	local clearance = character:GetClearance()
 
 	if (clearance > 1) then
-		local pay = pay * clearance * 2.5
+		return pay * clearance * 2.5
 	end
 end
