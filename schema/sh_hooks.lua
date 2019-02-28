@@ -8,3 +8,9 @@ function Schema:OnCharacterCreated(client, character)
 		character:SetClearance(class.clearance)
 	end
 end
+
+function Schema:CanPlayerUseSpeakers(client)
+	if (client:Team() == FACTION_ADMIN or client:Team() == FACTION_COUNCIL) then
+		return true
+	end
+end

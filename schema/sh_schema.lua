@@ -29,3 +29,23 @@ function Schema:PlayerHasClearance(client, clearance)
 
 	return false
 end
+
+do
+	local CLASS = {}
+	CLASS.color = Color(150, 125, 175)
+	CLASS.format = "%s broadcasts on the site's speakers: \"<:: %s ::>\""
+
+	function CLASS:CanSay(speaker, text)
+		if (!speaker:Alive() or hook.Run("CanPlayerUseSpeakers", speaker) != true) then
+			speaker:NotifyLocalized("notAllowed")
+
+			return false
+		end
+	end
+
+	function CLASS:OnChatAdd(speaker, text)
+		chat.AddText(self.color, string.format(self.format, speaker:Name(), text))
+	end
+
+	ix.chat.Register("speakers", CLASS)
+end
