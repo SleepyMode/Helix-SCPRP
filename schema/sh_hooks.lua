@@ -25,3 +25,7 @@ function Schema:InitializedPlugins()
 	ix.ammo.Register("tfa_ammo_sniper_rounds")
 	ix.ammo.Register("tfa_ammo_winchester")
 end
+
+function Schema:CanPlayerUseBusiness(client, uniqueID)
+	return false
+end
