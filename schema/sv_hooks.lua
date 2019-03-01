@@ -18,3 +18,7 @@ function Schema:OnCharacterCreated(client, character)
 		character:SetAttrib("str", 100)
 	end
 end
+
+function Schema:CanPlayerJoinClass(client, class, info)
+	return false
+end
