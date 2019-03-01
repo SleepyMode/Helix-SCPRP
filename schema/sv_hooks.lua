@@ -10,3 +10,11 @@ function Schema:GetSalaryAmount(client, faction)
 		return pay * clearance * 2.5
 	end
 end
+
+function Schema:OnCharacterCreated(client, character)
+	if (character:GetFaction() == FACTION_MTF) then
+		character:SetAttrib("end", 100)
+		character:SetAttrib("stm", 100)
+		character:SetAttrib("str", 100)
+	end
+end
