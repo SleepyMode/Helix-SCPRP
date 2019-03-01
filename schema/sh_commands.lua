@@ -15,7 +15,7 @@ ix.command.Add("CharSetClearance", {
 
 ix.command.Add("AlarmToggle", {
 	description = "Toggles the alarm on the map.",
-	adminOnly = true,
+	privilege = "SCP RP - Toggle Alarm",
 	OnRun = function(self, client)
 		if (game.GetMap() != "rp_scp_neb_b1") then
 			client:Notify("The current map is not supported.")
@@ -37,7 +37,7 @@ ix.command.Add("AlarmToggle", {
 
 ix.command.Add("TriggerEvent", {
 	description = "Triggers a map event.",
-	adminOnly = true,
+	privilege = "SCP RP - Trigger Map Event",
 	argumetns = {
 		bit.bor(ix.type.number, ix.type.optional)
 	},
