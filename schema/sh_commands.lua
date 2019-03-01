@@ -40,7 +40,7 @@ ix.command.Add("TriggerEvent", {
 	adminOnly = true,
 	argumetns = {
 		bit.bor(ix.type.number, ix.type.optional)
-	}
+	},
 	OnRun = function(self, client, eventID)
 		if (game.GetMap() != "rp_scp_neb_b1") then
 			client:Notify("The current map is not supported.")
