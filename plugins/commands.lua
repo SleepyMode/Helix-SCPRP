@@ -6,7 +6,7 @@ PLUGIN.author = "SleepyMode"
 PLUGIN.description = "Adds additional, utility commands."
 
 if (SERVER) then
-	ix.util.AddNetworkString("ixOpenPage")
+	util.AddNetworkString("ixOpenPage")
 
 	function PLUGIN:OpenPage(client, url)
 		net.Start("ixOpenPage")
