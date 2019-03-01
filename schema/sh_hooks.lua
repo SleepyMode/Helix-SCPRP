@@ -16,12 +16,24 @@ function Schema:CanPlayerUseSpeakers(client)
 end
 
 function Schema:InitializedPlugins()
+	local function registerAmmo(ammoType)
+		local plugin = ix.plugin.list["ammosave"]
+
+		if (plugin) then
+			local ammoList = plugin.ammoList
+
+			if (ammoList) then
+				table.insert(ammoList, ammoType)
+			end
+		end
+	end
+
 	-- Register TFA ammunition
-	ix.ammo.register("tfa_ammo_357")
-	ix.ammo.register("tfa_ammo_ar2")
-	ix.ammo.register("tfa_ammo_buckshot")
-	ix.ammo.register("tfa_ammo_pistol")
-	ix.ammo.register("tfa_ammo_smg")
-	ix.ammo.register("tfa_ammo_sniper_rounds")
-	ix.ammo.register("tfa_ammo_winchester")
+	registerAmmo("tfa_ammo_357")
+	registerAmmo("tfa_ammo_ar2")
+	registerAmmo("tfa_ammo_buckshot")
+	registerAmmo("tfa_ammo_pistol")
+	registerAmmo("tfa_ammo_smg")
+	registerAmmo("tfa_ammo_sniper_rounds")
+	registerAmmo("tfa_ammo_winchester")
 end
