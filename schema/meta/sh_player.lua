@@ -10,3 +10,9 @@ function PLAYER:HasClearance(clearance)
 
 	return false
 end
+
+if (SERVER) then
+	function PLAYER:ChatNotify(message)
+		Schema:ChatNotify(self, message)
+	end
+end

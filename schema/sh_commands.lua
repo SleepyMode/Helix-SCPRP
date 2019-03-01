@@ -34,3 +34,26 @@ ix.command.Add("AlarmToggle", {
 		ix.log.Add(client, "alarmToggle")
 	end
 })
+
+ix.command.Add("TriggerEvent", {
+	description = "Triggers a map event.",
+	adminOnly = true,
+	argumetns = {
+		bit.bor(ix.type.number, ix.type.optional)
+	}
+	OnRun = function(self, client, eventID)
+		if (game.GetMap() != "rp_scp_neb_b1") then
+			client:Notify("The current map is not supported.")
+			return
+		end
+
+		if (!Schema.mapEvents[eventID or 0]) then
+			for k, v in pairs(Schema.mapEvents) do
+				client:ChatNotify("%s [%d] - %s", k, v.name, v.description)
+			end
+		end
+
+		Schema:TriggerMapEvent(k)
+		ix.log.Add(client, "mapEventTrigger", eventID)
+	end
+})

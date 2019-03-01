@@ -20,6 +20,16 @@ ix.char.RegisterVar("clearance", {
 	default 	= -1
 })
 
+CAMI.RegisterPrivilege({
+	Name = "SCP RP - Toggle Alarm",
+	MinAccess = "admin"
+})
+
+CAMI.RegisterPrivilege({
+	Name = "SCP RP - Trigger Map Event",
+	MinAccess = "admin"
+})
+
 function Schema:PlayerHasClearance(client, clearance)
 	local character = client:GetCharacter()
 
