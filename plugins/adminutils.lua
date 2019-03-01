@@ -21,3 +21,18 @@ ix.command.Add("CharListBodyGroups", {
 		end
 	end
 })
+
+ix.command.Add("GetAllWhitelists", {
+	description = "Whitelists you to all currently available whitelists.",
+	privilege = "Manage Character Whitelist",
+	superAdminOnly = true,
+	OnRun = function(self, client)
+		for k, v in pairs(ix.faction.indices) do
+			client:SetWhitelisted(k, true)
+		end
+
+		for k, v in pairs(player.GetAll()) do
+			v:Notify(client:Name() .. " has whitelisted himself to all factions.")
+		end
+	end
+})
