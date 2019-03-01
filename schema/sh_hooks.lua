@@ -14,3 +14,14 @@ function Schema:CanPlayerUseSpeakers(client)
 		return true
 	end
 end
+
+function Schema:InitializedPlugins()
+	-- Register TFA ammunition
+	ix.ammo.register("tfa_ammo_357")
+	ix.ammo.register("tfa_ammo_ar2")
+	ix.ammo.register("tfa_ammo_buckshot")
+	ix.ammo.register("tfa_ammo_pistol")
+	ix.ammo.register("tfa_ammo_smg")
+	ix.ammo.register("tfa_ammo_sniper_rounds")
+	ix.ammo.register("tfa_ammo_winchester")
+end
